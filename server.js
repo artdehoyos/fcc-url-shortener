@@ -25,7 +25,7 @@ app.get(/\/new\/(.*)/, function(req, res){
                     console.log("Error inserting record.")
                     throw err;
                 }
-                res.json({originalUrl: url, shortUrl: result.insertedId});
+                res.json({originalUrl: url, shortUrl: "https://" + req.hostname + "/" + result.insertedId});
                 res.end();
                 db.close();
             });
