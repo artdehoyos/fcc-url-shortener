@@ -5,7 +5,7 @@ Send a request with a well-formed URL to receive an alternate URL
 that will redirect to the original.
 
 ## Example Input
-    https://quiet-savannah-2069.herokuapp.com/http://www.google.com
+    https://quiet-savannah-2069.herokuapp.com/new/http://www.google.com
 
 ## Example Output
     {
