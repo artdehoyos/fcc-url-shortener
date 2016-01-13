@@ -1,7 +1,7 @@
 # fcc-url-shortener (lengthener)
 *Give a URL, get a URL*
 
-Send a request with a well-formed URL to receive an alterate URL 
+Send a request with a well-formed URL to receive an alternate URL 
 that will redirect to the original.
 
 ## Example Input
