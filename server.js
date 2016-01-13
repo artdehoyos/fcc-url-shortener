@@ -9,7 +9,7 @@ var port = process.env.PORT || 8080;
 
 app.use(express.static('public'))
 
-app.post(/\/new\/(.*)/, function(req, res){
+app.get(/\/new\/(.*)/, function(req, res){
     var url = req.params[0];
     if(validUrl.isWebUri(url)){
         mongo.connect("mongodb://localhost:27017/urldb", function(err, db){
