@@ -9,10 +9,11 @@ var port = process.env.PORT || 8080;
 
 app.use(express.static('public'))
 
+// Really ought to be using POST, but using GET for easier demonstration.
 app.get(/\/new\/(.*)/, function(req, res){
     var url = req.params[0];
     if(validUrl.isWebUri(url)){
-        mongo.connect("mongodb://localhost:27017/urldb", function(err, db){
+        mongo.connect("mongodb://fcc-short:qazwsxedc@ds045465.mongolab.com:45465/urldb", function(err, db){
             if(err){
                 console.log("Error connecting to db.")
                 throw err;
@@ -35,7 +36,7 @@ app.get(/\/new\/(.*)/, function(req, res){
 app.get("/:id", function(req, res){
     var id = req.params.id;
     var url;
-    mongo.connect("mongodb://localhost:27017/urldb", function(err, db){
+    mongo.connect("mongodb://fcc-short:qazwsxedc@ds045465.mongolab.com:45465/urldb", function(err, db){
         if(err) throw err;
         try{
             var objId = new objectId(id);
